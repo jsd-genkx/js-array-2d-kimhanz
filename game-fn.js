@@ -1,9 +1,9 @@
 "use strict";
 
 const board = [
-	["A", "B", "C"],
-	["D", "E", "F"],
-	["G", "H", "I"],
+  ["A", "B", "C"],
+  ["D", "E", "F"],
+  ["G", "H", "I"],
 ];
 
 let x = 0;
@@ -12,13 +12,22 @@ const moves = [];
 moves.push(board[x][y]); // Start at A
 
 // Define movement functions
-function moveRight() {}
+function moveRight() {
+  y++; // 1
+  moves.push(board[x][y]);
+}
 
-function moveLeft() {}
+function moveLeft() {
+  y--;
+  moves.push(board[x][y]);
+}
 
 function moveUp() {}
 
-function moveDown() {}
+function moveDown() {
+  x++; // 1
+  moves.push(board[x][y]);
+}
 
 // Call the movement functions
 moveRight(); // Move from A to B
